@@ -55,7 +55,7 @@ public class ClientController {
 
     @DeleteMapping("/clients/{id}")
     public ResponseEntity<?> delete(@PathVariable(name = "id") int id) {
-        final boolean deleted  = clientService.delete(id);
+        final boolean deleted = clientService.delete(id);
 
         return deleted
                 ? new ResponseEntity<>(HttpStatus.OK)
